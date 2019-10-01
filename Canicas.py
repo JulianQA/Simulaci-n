@@ -16,8 +16,15 @@ def canicas1():
     bol [5][0] = 1
     bol [5][4] = 1
     cantidad = [[6],[2],[1],[5],[3],[10]]
-    click = multi(bol,cantidad)
-    return click
+    click = 1
+    res = multi(bol,bol)
+    click -= 1
+    while click>0:
+        res = multi(res,bol)
+        click -= 1
+    
+    return multi(res,cantidad)
+
 def vec(v,m):
     res = [[0]*len(m[0]) for i in range(len(m))]
     for i in range(len(m)):
@@ -30,4 +37,4 @@ def multiple(m1,m2):
         for j in range(len(m1[0])):
             res.append(vec(m1[i][j],m2))
     return res
-        
+         
