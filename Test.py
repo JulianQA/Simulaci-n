@@ -32,8 +32,14 @@ class TestmyFunctions(unittest.TestCase):
                     [0.16666666666666666]]
         res = canicas.canicas1(a,b,c)
         self.assertEqual(esperado,res)
-        
-        
+    def test3(self):
+        a = [[(3,1),(2,1)]]
+        b = [[(1,2)],[(1,1)]]
+        c = 1
+        esperado = [[(2, 10)]]
+        res = canicas.canicasimag(a,b,c)
+        self.assertEqual(esperado,res)
+      
 if __name__ == '__main__':
     unittest.main()
         
